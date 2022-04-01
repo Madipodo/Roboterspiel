@@ -15,7 +15,7 @@ DEBUG = True
 # Kamerabild auslesen
 def get_image():
     global hostname
-    cv2.waitKey(1) # Verzögerung, damit Kamera den Fokus findet (nur 1ms evtl unnötig)
+    cv2.waitKey(1) # Verzögerung, damit Kamera den Fokus findet (nur 1ms evtl. unnötig)
     resp = urllib.request.urlopen(f"http://{hostname}:4242/current.jpg?type=color")
     image = np.asarray(bytearray(resp.read()), dtype="uint8")
     image = cv2.imdecode(image, cv2.IMREAD_COLOR)
@@ -88,7 +88,7 @@ def get_color_of_area(area):
     return dict_letters["Error"]
 
 # Kommunikation mit Roboter herstellen und Konfigurieren
-# Konfiguationsfile für Kommunikation laden
+# Konfigurationsfile für Kommunikation laden
 conf = rtde_config.ConfigFile(config_filename)
 input_names, input_types = conf.get_recipe('input_vals')
 output_names, output_types = conf.get_recipe('output_vals')
@@ -101,7 +101,7 @@ con.connect()
 input_vals = con.send_input_setup(input_names, input_types)
 output_vals = con.send_output_setup(output_names, output_types)
 
-# Variablen Inizialisieren
+# Variablen Initialisieren
 input_vals.input_int_register_0 = 0
 
 #start data synchronization
@@ -152,5 +152,5 @@ while running:
     
     con.send(input_vals)
 
-# RTDE Client verbindung trennen
+# RTDE Client Verbindung trennen
 con.disconnect()
