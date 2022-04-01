@@ -31,6 +31,7 @@ def get_letter_from_image(image):
     squareToCheck = hsv[height - 95: height - 55, int(widgth / 2 - 20): int(widgth / 2 + 20), :]
     return get_color_of_area(squareToCheck)
 
+# Farbe aus übergebene Bildbereich erkennen
 def get_color_of_area(area):
     # Mögliche Rückgaben
     dict_letters = {"A":1, "I":2, "F":3, "O":4,"R":5, "U":6, "Error": 99}

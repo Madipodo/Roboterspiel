@@ -2,6 +2,7 @@ import numpy as np
 import cv2 as cv
 
 # Farberkennung mit Bild
+# Nützliche Link:
 # https://de.wikipedia.org/wiki/HSV-Farbraum
 # https://alloyui.com/examples/color-picker/hsv.html
 
