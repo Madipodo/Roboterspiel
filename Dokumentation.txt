@@ -1,0 +1,24 @@
+DOKUMENTATION
+
+--- Kamera ---
+Über diesen Link kann auf das Kamerabild zugegriffen werden:
+http://10.1.253.16:4242/current.jpg?type=color - Die IP-Adresse muss an die des Robotersangepasst werden
+Das Bild zeigt nur ein statisches Bild an -> für eine neues Bild aktualisieren
+
+--- Kommunikation ---
+Für die Echtzeit Kommunikation zwischen Pyhton und Roboter:
+https://www.universal-robots.com/articles/ur/interface-communication/real-time-data-exchange-rtde-guide/
+Ist standardmäßig aktiviert
+
+Client: PC
+Server: Roboter
+Port: 30
+
+Ablauf:
+1. Synchronisation
+    - Liste der Ein-/Ausgangsvariablen wird geschickt
+        - Bei Fehler: An input parameter is already on use - Unter Instalation EtherNet/IP Adapter deaktivieren
+    - maximal 2048 bytes
+    - Als antwort bekommt man eine Variable zurück mit IDs für einzelen Eingänge
+
+2. 

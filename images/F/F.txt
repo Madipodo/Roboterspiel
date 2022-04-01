@@ -1,0 +1,8 @@
+H_low  = 84
+H_high = 121
+
+S_low  = 60
+S_high = 100
+
+V_low  = 13
+V_high = 37

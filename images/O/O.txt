@@ -1,0 +1,8 @@
+H_low  = 22
+H_high = 50
+
+S_low  = 20
+S_high = 100
+
+V_low  = 30
+V_high = 100
