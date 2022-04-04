@@ -51,13 +51,14 @@ def get_color_of_area(area):
                 posibility += 1
     
     average = [sum[0] / numberOfPixelToCheck, sum[1] / numberOfPixelToCheck, sum[2] / numberOfPixelToCheck]
+    posibility_red = posibility / numberOfPixelToCheck
 
     # Funktion zum umnormieren des Durchschnittwertes (H - 360, S - 100, V - 100)
     def normalize(value, value_max, norm_max):
         return value * norm_max / value_max
 
     # Anhand der Durchschnittswerte, Farbe (Buchstabe) erkennen und Ergebnis zurückgeben
-    if posibility / numberOfPixelToCheck > 0.75:
+    if posibility_red > 0.75:
         if DEBUG: 
             print("I")
         return dict_letters["I"]
